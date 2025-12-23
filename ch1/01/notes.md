@@ -1,7 +1,6 @@
 # 1.1 Getting Started
 
-It's important to keep in mind that this book was written in 1988 and this covers
-ASNI C. Some things have changed since then, for example: the book examples omits the return type of
+It's important to keep in mind that this book was written in 1988 and this covers ASNI C. Some things have changed since then, for example: the book examples omits the return type of
 main.
 
 As usual the first library included is the so-called stdio.h or (`standard input output`), C programmers
@@ -27,3 +26,27 @@ The first exercise of the book (`Exercise 1-1`), the authors suggest us to exper
 error messages.
 
 # 1.2 Variables and Arithmetic Expressions
+
+The next program uses a formula that converts Fahreneheit's temperatures to Celcius equivalent.
+Which is C = (5/9) \* (F - 32)
+
+Unlike ANSI C, comments can know be just two slashs: `//`, and it's no longer necessary to declare
+variables on top functions, we can declare them next to where they're being used.
+Comments may be used freely to make a program easier to understand.
+
+C compilers do not care about how a program looks (how it's indented), proper identation and spacing
+are critical in making programs easy for people to read, the authours recommend writing only one statement per line
+(a statement is separated by semicolons) and using blanks around operators, so `x + 2` instead of `x+2` is preferred.
+
+A decimal point in a constant indicates that it is floating point number (1.0) <- floating point 1
+
+If an arithmetic operator has integer operands, an integer operation is performed. If an arithmetic
+operator has one floating-point operand and one integer operand, the integer will be converted to floating
+point before the operation is done.
+
+for instance:
+
+(fahr - 32), assuming the fahr variable is a floating-point, the 32 would be automatically converted  
+to floating point. Writing floating-point constants with explicit decimal points even when they have integral
+values emphasizes their floating-point nature for human readers.
+(fahr - 32.0)
