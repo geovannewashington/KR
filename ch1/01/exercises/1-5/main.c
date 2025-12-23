@@ -1,3 +1,5 @@
+// Exercise 1-5. Modify the temperature conversion program to print the table in reverse order
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -15,7 +17,7 @@ void print_banner();
 void print_heading();
 
 int 
-main(int argc, char **argv)
+main(void)
 {
     const float LOWER = 0.0f;   // lower limit of temperature
     const float UPPER = 300.0f; // upper limit of temperature
@@ -24,11 +26,11 @@ main(int argc, char **argv)
     print_banner(); 
     print_heading();
 
-    float celcius = LOWER;
-    while (celcius <= UPPER) {
+    float celcius = UPPER;
+    while (celcius >= LOWER) {
         float fah = celcius * (9.0f / 5.0f) + 32.0f;
         printf(ANSI_COLOR_GREEN "%5.0f°C %13.1f°F\n" ANSI_COLOR_RESET, celcius, fah);
-        celcius += STEP;
+        celcius -= STEP;
     }
     return EXIT_SUCCESS;
 }

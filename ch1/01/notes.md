@@ -50,3 +50,7 @@ for instance:
 to floating point. Writing floating-point constants with explicit decimal points even when they have integral
 values emphasizes their floating-point nature for human readers.
 (fahr - 32.0)
+
+# 1.3 The for statement
+
+... Nothing to take notes on
