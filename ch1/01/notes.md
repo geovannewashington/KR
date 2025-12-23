@@ -54,3 +54,19 @@ values emphasizes their floating-point nature for human readers.
 # 1.3 The for statement
 
 ... Nothing to take notes on
+
+# 1.4 Symbolic Constants
+
+It's bad practice to use 'magic numbers', like 300 and 20 in a program because they convey little information
+to someone who might have to read the program later, and they are hard to change in a systematic way.
+
+One way to deal with magic numbers is to give them meaningful names.
+
+Example
+
+`#define name replacement`
+
+Any occurrence of `name` will be replaced by the corresponding replacement text.
+
+Those are symbolic constants, not variables, they are just text that gets replaced by the `replacement` expression
+at compilation time. Symbolic constant names are conventioanlly written in upper case .
